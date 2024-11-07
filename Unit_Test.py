@@ -37,5 +37,12 @@ class TestPrimeFunction(unittest.TestCase):
         # отрицательное число
         self.check_prime(-5, 0)
 
+    def test_incorrect(self):
+        # Проверка при задании невалидных значений
+        self.check_prime("test", 0)
+        self.check_prime("testing2", 0)
+        self.check_prime(10**10, 0)
+
+
 if __name__ == "__main__":
     unittest.main()
