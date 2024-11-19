@@ -19,15 +19,12 @@ jobs:
           sudo apt update -y
           sudo apt install -y g++ cmake make python3 python3-pip 
           python3 -m pip install --upgrade pip 
-          python3 -m pip install unittest-xml-reporting
-
+          python3 -m pip install unittest
+          
       - name: Compile Prime.cpp
         run: |
           mkdir -p build
           g++ -o build/Prime.exe Prime.cpp
-
-      - name: Set execution permissions
-        run: chmod +x build/Prime.exe
 
       - name: Run Python tests
         run: |
