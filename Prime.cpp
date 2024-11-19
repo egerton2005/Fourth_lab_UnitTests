@@ -17,6 +17,6 @@ int main() {
         std::cout<<0 << std::endl;
         return 0;
     }
-    std::cout << (Prime(n) ? 1 : 0) << std::endl;
+    std::cout << (Prime(input) ? 1 : 0) << std::endl;
     return 0;
 }
