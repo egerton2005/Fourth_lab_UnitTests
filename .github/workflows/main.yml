@@ -26,6 +26,9 @@ jobs:
           mkdir -p build
           g++ -o build/Prime.exe Prime.cpp
 
+      - name: Set execution permissions
+        run: chmod +x build/Prime.exe
+
       - name: Run Python tests
         run: |
           python3 Unit_Test.py
