@@ -17,8 +17,9 @@ jobs:
       - name: Setup environment
         run: |
           sudo apt update -y
-          sudo apt install g++ cmake make python3 python3-pip 
-          python3 pip install --upgrade pip unittest-xml-reporting
+          sudo apt install -y g++ cmake make python3 python3-pip 
+          python3 -m pip install --upgrade pip 
+          python3 -m pip install unittest-xml-reporting
 
       - name: Compile Prime.cpp
         run: |
