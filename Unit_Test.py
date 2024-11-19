@@ -5,7 +5,7 @@ class TestPrimeFunction(unittest.TestCase):
     def check_prime(self, value, expected):
         # Запускаем скомпилированную программу и подаем значение на вход
         result = subprocess.run(
-            ['./Prime.exe'],
+            ['./build/Prime.exe'],
             input=f"{value}\n",
             capture_output=True,
             text=True
