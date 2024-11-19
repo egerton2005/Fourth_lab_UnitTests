@@ -18,11 +18,12 @@ jobs:
         run: |
           sudo apt update -y
           sudo apt install g++ cmake make python3 python3-pip 
-          python3 pip install --upgrade pip pytest
+          python3 pip install --upgrade pip unittest-xml-reporting
 
       - name: Compile Prime.cpp
         run: |
-          g++ -o Prime.exe Prime.cpp
+          mkdir -p build
+          g++ -o build/Prime.exe Prime.cpp
 
       - name: Run Python tests
         run: |
