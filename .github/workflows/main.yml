@@ -39,6 +39,8 @@ jobs:
       run: |
         choco install mingw
         choco install python3
+        python -m pip install --upgrade pip
+        python -m pip install unittest-xml-reporting
 
     - name: Compile Prime.cpp
       run: |
